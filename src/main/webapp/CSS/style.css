@@ -1,0 +1,394 @@
+body {
+    background: #f6f6f6;
+}
+
+div {
+    display: block;
+}
+
+.headbox {
+    background: rgb(1, 95, 97);
+    background: -moz-linear-gradient(118deg, rgba(1, 95, 97, 0.6225840678068102) 0%, rgba(110, 0, 255, 1) 100%);
+    background: -webkit-linear-gradient(118deg, rgba(1, 95, 97, 0.6225840678068102) 0%, rgba(110, 0, 255, 1) 100%);
+    background: linear-gradient(118deg, rgba(1, 95, 97, 0.6225840678068102) 0%, rgba(110, 0, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#015f61", endColorstr="#6e00ff", GradientType=1);
+    color: white;
+    width: 100%;
+    padding: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.row {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.col {
+    margin: 20px;
+}
+
+.cl-mg {
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+body {
+    background-color: #f6f6f6;
+}
+
+.container {
+    width: 100%;
+}
+/*head*/
+
+.bg_head {
+    background-color: #212529;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #212529;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #212529
+}
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: #212529;
+}
+
+.dropbtn {
+    background-color: #212529;
+    border: none;
+    color: gray;
+    margin-top: 0.5em;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+/*banner (file riêng)*/
+
+.hero-image {
+    height: 100%;
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border: 1px;
+    margin: 4 px;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+}
+
+.hero-text p {
+    font-size: 30px;
+}
+/*footer*/
+
+footer {
+    line-height: 50px;
+    background-color: #192027;
+    text-align: center;
+    clear: both;
+    color: white;
+    list-style-type: none;
+}
+
+.miniFooter {
+    line-height: 50px;
+    background-color: #262b30;
+    text-align: center;
+    font-variant: small-caps;
+    clear: both;
+}
+
+.center {
+    text-align: center;
+    background-color: #262b30;
+    color: white;
+    padding: 10px;
+}
+
+.deco-none {
+    text-decoration: none;
+}
+
+.lefted {
+    text-align: left;
+    align-items: left;
+}
+
+.newletter {
+    align-items: center;
+}
+
+footer {
+    padding-top: 10px;
+}
+
+.pagination {
+    text-decoration: none;
+    list-style: none;
+}
+
+.page-numbers {
+    line-height: 36px;
+    display: inline-block;
+    min-width: 48px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    background: #fff;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    margin-right: 2px;
+    color: #747b86;
+    text-align: center;
+}
+
+.page-numbers.current {
+    background: #0674ec;
+    color: #fff;
+}
+
+.f-box {
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #f6f6ff;
+}
+
+div {
+    display: block;
+}
+
+.headbox {
+    background: rgb(1, 95, 97);
+    background: -moz-linear-gradient(118deg, rgba(1, 95, 97, 0.6225840678068102) 0%, rgba(110, 0, 255, 1) 100%);
+    background: -webkit-linear-gradient(118deg, rgba(1, 95, 97, 0.6225840678068102) 0%, rgba(110, 0, 255, 1) 100%);
+    background: linear-gradient(118deg, rgba(1, 95, 97, 0.6225840678068102) 0%, rgba(110, 0, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#015f61", endColorstr="#6e00ff", GradientType=1);
+    color: white;
+    width: 100%;
+    padding: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.row {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.col {
+    margin: 20px;
+}
+
+.cl-mg {
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.openChatBtn {
+    background-color: #4287f5;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.openChat {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+}
+
+.chatform {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.chatform textarea {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    font-weight: 500;
+    background: #d5e7ff;
+    color: rgb(0, 0, 0);
+    resize: none;
+    min-height: 200px;
+}
+
+.chatform textarea:focus {
+    background-color: rgb(219, 255, 252);
+    outline: none;
+}
+
+.chatform .btn {
+    background-color: rgb(34, 197, 107);
+    color: white;
+    padding: 16px 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.chatform .close {
+    background-color: red;
+}
+
+.chatform .btn:hover,
+.openChatBtn:hover {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.card_title {
+    color: black !important;
+}
+
+.a_card {
+    color: black;
+}
+
+.f6 {
+    background-color: #f6f6f6;
+}
+
+.itemside {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.it-con {
+    height: 50px;
+    width: 50px;
+}
+
+.para {
+    margin-top: 5px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.d-b {
+    background-color: #0674ec;
+    height: 50px;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.pl {
+    width: 100%;
+}
+
+.info-box {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 40px;
+}
+
+.cmt-box {
+    width: 100%;
+    min-height: 50px;
+    background-color: #f6f6f6;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.cmt-item {
+    background-color: white;
+    color: black;
+    margin: 5px;
+    border-radius: 5px;
+    border: 3px solid #adadad;
+    padding: 10px;
+}
+
+.tag {
+    background-color: #4287f5;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
