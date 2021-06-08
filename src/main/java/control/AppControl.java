@@ -9,15 +9,17 @@ import DAO.*;
 import entity.*;
 
 @WebServlet(name = "HomeControl", value = "/HomeControl")
-public class HomeControl extends HttpServlet {
+public class AppControl extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
     }
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -29,11 +31,14 @@ public class HomeControl extends HttpServlet {
 
         //b2: set data to jsp
         request.setAttribute("listA", list);
-        request.setAttribute("listCC", listC);
         request.setAttribute("p", last);
         request.getRequestDispatcher("App.jsp").forward(request, response);
         //404 -> url
         //500 -> jsp properties
+    }
+    @Override
+    public String getServletInfo() {
+        return "Short description";
     }
 
 }

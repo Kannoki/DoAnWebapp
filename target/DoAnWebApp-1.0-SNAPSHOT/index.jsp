@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share App - Trang chủ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="icon" href="item/Logo.svg">
 </head>
 <body>
@@ -81,7 +81,49 @@
             <a href=""><button type="button" class="btn btn-warning">Đăng ký</button></a>
         </div>
     </div>
-
 </header>
+<div class="hero-image"
+     style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('item/mainbanner.jpg');">
+    <div class="hero-text">
+        <h1> Share App</h1>
+        <p>
+            App you need - App we give.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+<button class="openChatBtn" onclick="openForm()">Chat</button>
+<div class="openChat">
+    <form class="chatform">
+        <h1>Chat</h1>
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn close" onclick="closeForm()">
+            Close
+        </button>
+    </form>
+</div>
+
+
+<script>
+    document.querySelector(".openChatBtn").addEventListener("click", openForm);
+    document.querySelector(".close").addEventListener("click", closeForm);
+
+    function openForm() {
+        document.querySelector(".openChat").style.display = "block";
+    }
+
+    function closeForm() {
+        document.querySelector(".openChat").style.display = "none";
+    }
+</script>
+
 </body>
 </html>
