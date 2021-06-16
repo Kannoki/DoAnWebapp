@@ -100,16 +100,25 @@
 
 <button class="openChatBtn" onclick="openForm()">Chat</button>
 <div class="openChat">
+    <form class="chatform" style="min-height:70%">
+        <h2>Chat</h2>
+        <hr>
+        <div class="chatitem">
+            <a style="text-decoration: none; color: blue">
+                Name
+            </a>
+            <p>
+                Hi
+            </p>
+        </div>
+    </form>
     <form class="chatform">
-        <h1>Chat</h1>
-        <label for="msg"><b>Message</b></label>
         <textarea placeholder="Type message.." name="msg" required></textarea>
         <button type="submit" class="btn">Send</button>
-        <button type="button" class="btn close" onclick="closeForm()">
-            Close
-        </button>
+        <button type="button" class="btn close" onclick="closeForm()">Close</button>
     </form>
 </div>
+
 
 
 <script>
@@ -125,5 +134,68 @@
     }
 </script>
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="info-footer centered" style="max-width:80%">
+                    <div class="info__logo lefted">
+                        <h1 class="lefted">
+                            SHARE APP
+                        </h1>
+                    </div>
+                    <p class="info--text lefted">
+                        Trang web chia sẻ ứng dụng, trò chơi cho mọi người.
+                    </p>
+                </div>
+                <div class=" info-footer lefted">
+                    <h4 class="footer-widget-title text--white le">Liên hệ</h4>
+                    <ul class="info-contact none-list ">
+                        <li title="Phone Number ">
+                            <span class="info lefted">0918607205</span>
+                        </li>
+                        <li title="Email ">
+                            <span class="info lefted">tthieu.20it2@vku.udn.vn</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6 ">
+                <div class="info-footer ">
+                    <div class="row ">
+
+                    </div>
+                </div>
+                <div class="newsletter ">
+                    <h4 class="footer-widget-title text--white ">Mạng xã hội</h4>
+                    <p>Theo dõi các mạng xã hội để có được những thông tin mới nhất</p>
+                    <div class="social social--color--filled ">
+                        <ul class="none-list ">
+                            <li>
+                                <a href="# ">
+                                    <span class="fab fa-facebook-f "></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="# ">
+                                    <span class="fab fa-twitter "></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mini-footer">
+        <p class="center">
+            Copyrights by
+            <a class="deco-none" href="/">Kannoki</a>
+        </p>
+    </div>
+</footer>
 </body>
 </html>

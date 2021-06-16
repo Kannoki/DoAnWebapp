@@ -5,12 +5,20 @@ public class User {
     private String name_acc;
     private String name_log;
     private String passWord;
-
+    private String userRule;
     public User(int id, String name_acc, String name_log, String passWord) {
         this.id = id;
         this.name_acc = name_acc;
         this.name_log = name_log;
         this.passWord = passWord;
+    }
+
+    public String getUserRule() {
+        return userRule;
+    }
+
+    public void setUserRule(String userRule) {
+        this.userRule = userRule;
     }
 
     public int getId() {
