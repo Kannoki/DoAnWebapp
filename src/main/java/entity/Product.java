@@ -74,7 +74,7 @@ public class Product {
         this.para = para;
     }
 
-    public Product(int id, String name, String types, String info, String image, int category, String link) {
+    public Product(int id, String name, String types, String info, String image, int category, String link, String para) {
         this.id = id;
         this.name = name;
         this.types = types;
@@ -82,20 +82,6 @@ public class Product {
         this.image = image;
         this.category = category;
         this.link = link;
-    }
-
-    public Product(int id, String name, String image, String para) {
-        this.id = id;
-        this.name = name;
-        this.image = image;
         this.para = para;
-    }
-
-    public Product(int id, String name, String types, String image, int category) {
-        this.id = id;
-        this.name = name;
-        this.types = types;
-        this.image = image;
-        this.category = category;
     }
 }

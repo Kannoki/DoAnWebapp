@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet(name = "indexServlet", value = "/indexServlet")
 public class AllControl extends HttpServlet {
@@ -24,25 +23,9 @@ public class AllControl extends HttpServlet {
         ArrayList<Product> list = new ArrayList<>(a_dao.getAllApp());
         //b2: set data to jsp
         request.setAttribute("listP", list);
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("index").forward(request, response);
         //404 -> url
         //500 -> jsp properties
     }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
-    }
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }
-
-
 
 }
