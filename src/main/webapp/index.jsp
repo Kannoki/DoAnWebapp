@@ -82,8 +82,8 @@
 
         <div class="text-end">
             <a href="JSP/Login.jsp"> <button type="button" class="btn btn-outline-light me-2">Đăng
-                nhập</button></a>
-            <a href=""><button type="button" class="btn btn-warning">Đăng ký</button></a>
+                nhập/ Đăng kí</button></a>
+
         </div>
     </div>
 </header>
@@ -109,7 +109,7 @@
                         <div class="card">
                             <img src="${p.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
                             <div class="card-body">
-                                <a class="a_card" href="">
+                                <a class="a_card" href="${p.link}">
                                     <h5 class="card-title">${p.name}</h5>
                                     <p>${p.para}</p>
                                 </a>
