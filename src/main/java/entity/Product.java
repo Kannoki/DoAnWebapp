@@ -6,7 +6,7 @@ public class Product {
     private String types;
     private String info;
     private String image;
-    private int catalist;
+    private int category;
     private String link;
     private String para;
 
@@ -50,12 +50,12 @@ public class Product {
         this.image = image;
     }
 
-    public int getCatalist() {
-        return catalist;
+    public int getCategory() {
+        return category;
     }
 
-    public void setCatalist(int catalist) {
-        this.catalist = catalist;
+    public void setCategory(int category) {
+        this.category = category;
     }
 
     public String getLink() {
@@ -74,13 +74,13 @@ public class Product {
         this.para = para;
     }
 
-    public Product(int id, String name, String types, String info, String image, int catalist, String link) {
+    public Product(int id, String name, String types, String info, String image, int category, String link) {
         this.id = id;
         this.name = name;
         this.types = types;
         this.info = info;
         this.image = image;
-        this.catalist = catalist;
+        this.category = category;
         this.link = link;
     }
 
@@ -91,11 +91,11 @@ public class Product {
         this.para = para;
     }
 
-    public Product(int id, String name, String types, String image, int catalist) {
+    public Product(int id, String name, String types, String image, int category) {
         this.id = id;
         this.name = name;
         this.types = types;
         this.image = image;
-        this.catalist = catalist;
+        this.category = category;
     }
 }

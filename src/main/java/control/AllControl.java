@@ -21,7 +21,7 @@ public class AllControl extends HttpServlet {
 
         AllDAO a_dao = new AllDAO();
 
-        ArrayList<Product> list = new ArrayList<Product>(a_dao.getAllApp());
+        ArrayList<Product> list = new ArrayList<>(a_dao.getAllApp());
         //b2: set data to jsp
         request.setAttribute("listP", list);
         request.getRequestDispatcher("index.jsp").forward(request, response);

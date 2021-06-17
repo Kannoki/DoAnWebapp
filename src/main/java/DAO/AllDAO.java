@@ -13,7 +13,7 @@ public class AllDAO {
     Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
-    public List<Product> getAllApp() {
+    public ArrayList<Product> getAllApp() {
         ArrayList<Product> list = new ArrayList<>();
         String query = "select * from sa_product";
         try {

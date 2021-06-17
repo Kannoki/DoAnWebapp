@@ -105,7 +105,6 @@
             </div>
             <div class="row">
             <c:forEach items="${listP}" var="p">
-
                     <div class="col-lg-4 col-md-6 cl-mg">
                         <div class="card">
                             <img src="${p.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
