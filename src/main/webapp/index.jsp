@@ -70,7 +70,7 @@
                 </div>
 
             </li>
-            <li><a href="" class="nav-link px-2 text-black">FAQs</a></li>
+            <li><a href="JSP/FAQS.jsp" class="nav-link px-2 text-black">FAQs</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -78,7 +78,7 @@
         </form>
 
         <div class="text-end">
-            <a href=""> <button type="button" class="btn btn-outline-light me-2">Đăng
+            <a href="/JSP/Login.jsp"> <button type="button" class="btn btn-outline-light me-2">Đăng
                 nhập</button></a>
             <a href=""><button type="button" class="btn btn-warning">Đăng ký</button></a>
         </div>

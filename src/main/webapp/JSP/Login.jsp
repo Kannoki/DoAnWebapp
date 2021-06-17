@@ -1,27 +1,38 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%--
+  Created by IntelliJ IDEA.
+  User: ADMIN
+  Date: 6/17/2021
+  Time: 12:01 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Share App - Trang chủ</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <link rel="icon" href="item/Logo.svg">
-
+    <title>Share App - Log In</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/lg.css">
+    <link rel="icon" href="../item/Logo.svg">
 </head>
+
 <body>
+
+</body>
 <header class="p-3 bg_head text-white">
     <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start bg-head">
 
-        <img src="item/Logo.svg" width="40px" height="40px" alt="">
+        <a href="../index.jsp"><img src="Logo.svg" width="40px" height="40px" alt=""></a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 text-secondary">Trang Chủ</a></li>
+            <li><a href="../index.jsp  " class="nav-link px-2 text-black">Trang Chủ</a></li>
             <li>
                 <div class="dropdown">
-                    <a href="JSP/App.jsp" class="nav-link px-2 text-black">Ứng Dụng</a>
+                    <a href="" class="nav-link px-2 text-black">Ứng Dụng</a>
                     <div class="dropdown-content">
                         <ul>
                             <li>
@@ -47,7 +58,7 @@
             </li>
             <li>
                 <div class="dropdown">
-                    <a href="" class="nav-link px-2 text-black">Game</a>
+                    <a href="#" class="nav-link px-2 text-black">Game</a>
                     <div class="dropdown-content">
                         <ul>
                             <li>
@@ -70,7 +81,8 @@
                 </div>
 
             </li>
-            <li><a href="JSP/FAQS.jsp" class="nav-link px-2 text-black">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 text-black">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 text-black">About</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -78,113 +90,80 @@
         </form>
 
         <div class="text-end">
-            <a href="/JSP/Login.jsp"> <button type="button" class="btn btn-outline-light me-2">Đăng
-                nhập</button></a>
-            <a href=""><button type="button" class="btn btn-warning">Đăng ký</button></a>
+            <a href="./signIn.html"><button type="button" class="btn btn-warning" >Đăng ký</button></a>
         </div>
     </div>
+
 </header>
-<div class="hero-image"
-     style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('item/mainbanner.jpg');">
-    <div class="hero-text">
-        <h1> Share App</h1>
-        <p>
-            App you need - App we give.
-        </p>
-    </div>
-</div>
-<div class="container container-fluid">
-    <div class="row">
-        <div class="col f-box">
-            <div class="title">
-                <h2>Ứng dụng nổi bật</h2>
-                <hr>
-            </div>
-            <c:forEach items="${listP}" var="o">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 cl-mg">
-                        <div class="card">
-                            <a href="">
-                                <img src="${o.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
-                            </a>
-                            <div class="card-body">
-                                <a class="a_card" href="">
-                                <h5 class="card-title">${o.name}</h5>
-                                    <p>${o.para}</p>
-                                </a>
-                            </div>
+
+<section>
+    <div class="container" style="background-color: #f6f6f6">
+        <div class="row log-bg">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="box">
+                    <div class="login-head">
+                        <h2>
+                            Đăng Nhập
+                        </h2>
+                    </div>
+                    <div>
+                        <form action="">
+                            <label for="">Username:</label>
+                            <input type="text" class="text-field" placeholder="Nhập tên đã đăng kí.">
+                        </form>
+                        <form action="">
+                            <label for="">Password:</label>
+                            <input type="password" class="text-field" placeholder="Nhập mật khẩu.">
+                        </form>
+                        <form action="" class="log_l">
+                            <button class="btn" style="    background-color: #408cff; color:#ffffff">Đăng nhập </button>
+
+                            <a href="./signIn.html" class="a1">Chưa có tài khoản, Đăng ký ngay!</a>
+                            <a href="./forgotting.html" class="a2">Quên mật khẩu.</a>
+                        </form>
+
+                        <div style="color:white">
+                            ------------------------------------
                         </div>
                     </div>
+
                 </div>
-            </c:forEach>
+            </div>
         </div>
+
     </div>
-
-</div>
-
+</section>
 
 
 
 
 
-<button class="openChatBtn" onclick="openForm()">Chat</button>
-<div class="openChat">
-    <form class="chatform" style="height:70% !important;">
-        <h2>Chat</h2>
-        <hr>
-        <div class="chatItem">
-            <a style="text-decoration: none; color: blue;">
-                Name
-            </a>
-            <p>
-                Hi
-            </p>
-        </div>
-    </form>
-    <form class="chatform">
-        <textarea class="tArea" placeholder="Type message.." name="msg"></textarea>
-        <div class="row">
-            <button type="submit" class="btn">Send</button>
-            <button type="button" class="btn close" onclick="closeForm()">Close</button>
-        </div>
-    </form>
-</div>
 
-<script language="JavaScript">
-    document.querySelector(".openChatBtn").addEventListener("click", openForm);
-    document.querySelector(".close").addEventListener("click", closeForm);
 
-    function openForm() {
-        document.querySelector(".openChat").style.display = "block";
-    }
 
-    function closeForm() {
-        document.querySelector(".openChat").style.display = "none";
-    }
-</script>
 
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="info-footer centered" style="max-width:80%">
-                    <div class="info__logo lefted">
-                        <h1 class="lefted">
+    <div class=" container ">
+        <div class="row ">
+            <div class="col-md-6 ">
+                <div class="info-footer centered " style="max-width:80% ">
+                    <div class="info__logo lefted ">
+                        <h1 class="lefted ">
                             SHARE APP
                         </h1>
                     </div>
-                    <p class="info--text lefted">
+                    <p class="info--text lefted ">
                         Trang web chia sẻ ứng dụng, trò chơi cho mọi người.
                     </p>
                 </div>
-                <div class=" info-footer lefted">
-                    <h4 class="footer-widget-title text--white le">Liên hệ</h4>
+                <div class=" info-footer lefted ">
+                    <h4 class="footer-widget-title text--white le ">Liên hệ</h4>
                     <ul class="info-contact none-list ">
                         <li title="Phone Number ">
-                            <span class="info lefted">0918607205</span>
+                            <span class="info lefted ">0918607205</span>
                         </li>
                         <li title="Email ">
-                            <span class="info lefted">tthieu.20it2@vku.udn.vn</span>
+                            <span class="info lefted ">tthieu.20it2@vku.udn.vn</span>
                         </li>
 
                     </ul>
@@ -219,12 +198,17 @@
             </div>
         </div>
     </div>
-    <div class="mini-footer">
-        <p class="center">
+    <div class="mini-footer ">
+        <p class="center ">
             Copyrights by
-            <a class="deco-none" href="/">Kannoki</a>
+            <a class="deco-none " href="/ ">Kannoki</a>
         </p>
     </div>
 </footer>
+
+
+
+
 </body>
+
 </html>
