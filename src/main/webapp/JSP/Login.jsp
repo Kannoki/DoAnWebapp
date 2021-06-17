@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/lg.css" />
-    <title>Login Form</title>
+    <link rel="icon" href="../item/Logo.svg">
+    <title>ShareApp - Đăng kí/ Đăng nhập</title>
 </head>
 <body>
 
@@ -23,8 +24,8 @@
         <h3>Tạo tài khoản</h3>
         <p>Nhập tên tài khoản và mật khẩu.
         </p>
-        <input class="w100" type="email" placeholder="Tài khoản" reqired autocomplete='off' />
-        <input type="email" placeholder="Tên đăng nhập" autocomplete='off' reqired />
+        <input class="w100" type="text" placeholder="Tài khoản" reqired autocomplete='off' />
+        <input type="text" placeholder="Tên đăng nhập" autocomplete='off' reqired />
         <input type="password" placeholder="Mật khẩu" reqired />
         <input type="password" placeholder="Nhập lại mật khẩu" reqired />
         <button class="form-btn sx log-in" type="button">Log In</button>
@@ -34,10 +35,10 @@
         <h3>Welcome</br>Back !</h3>
         <button class="fb" type="button">Log In With Facebook</button>
         <p>- or -</p>
-        <input type="email" placeholder="Tên đăng nhập" autocomplete='off' reqired />
-        <input type="password" placeholder="Mật khẩu" reqired />
+        <input name="user" type="text" placeholder="Tên đăng nhập" autocomplete='off' reqired />
+        <input name="password" type="password" placeholder="Mật khẩu" reqired />
         <button class="form-btn sx back" type="button">Back</button>
-        <button class="form-btn dx" type="submit">Log In</button>
+        <button class="form-btn dx" type="submit" value="login">Log In</button>
     </form>
 </div>
 <script>

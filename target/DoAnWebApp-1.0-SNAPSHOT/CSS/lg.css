@@ -1,109 +1,258 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400';
+* {
+    margin: 0;
+    padding: 0;
+}
 
-/* sign in FORM */
-.logreg-forms{
-    width: 412px;
-    margin: 10vh auto;
-    background-color:#f3f3f3!important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+body {
+    background: #f6f6f6;
 }
-.logreg-forms form {
-    width: 100%;
-    max-width: 410px;
-    padding: 15px;
-    margin: auto;
+
+.container{
+    position:absolute;
+    width: auto;
+    height:auto;
+    top: calc(50% - 240px);
+    left: calc(50% - 160px);
 }
-.logreg-forms .form-control {
-    position: relative;
+
+form {
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    width: 310px;
+    height: 470px;
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
-}
-.logreg-forms .form-control:focus { z-index: 2; }
-.logreg-forms .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.logreg-forms .form-signin input[type="password"] {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
-.logreg-forms .social-login{
-    width:390px;
-    margin:0 auto;
-    margin-bottom: 14px;
-}
-.logreg-forms .social-btn{
+p {
+    font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    color:white;
-    width:190px;
-    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #87613d;
+    margin-bottom: 40px;
 }
 
-.logreg-forms a{
+p > span {
+    padding-top: 3px;
     display: block;
-    padding-top:10px;
-    color:lightseagreen;
+    font-weight: 400;
+    font-size: 9px;
 }
 
-.logreg-form .lines{
-    width:200px;
-    border:1px solid red;
+h3 {
+    font-family: 'Dosis';
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #87613d;
+    margin-bottom: 30px;
 }
 
-
-.logreg-forms button[type="submit"]{ margin-top:10px; }
-
-.logreg-forms .facebook-btn{  background-color:#3C589C; }
-
-.logreg-forms .google-btn{ background-color: #DF4B3B; }
-
-.logreg-forms .form-reset, #logreg-forms .form-signup{ display: none; }
-
-.logreg-forms .form-signup .social-btn{ width:210px; }
-
-.logreg-forms .form-signup input { margin-bottom: 2px;}
-
-.form-signup .social-login{
-    width:210px !important;
-    margin: 0 auto;
+input,
+button{
+    outline: none !important;
 }
 
-/* Mobile */
+button.fb {
+    border: none;
+    background: #3b5998;
+    width: 160px;
+    height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid #29487d;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition:all 0.3s linear;
+}
+button.fb:hover {
+    background: #fff;
+    color: #3b5998;
+}
 
-@media screen and (max-width:500px){
-    .logreg-forms{
-        width:300px;
-    }
+button.form-btn {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    bottom: 0;
+    border: 0;
+    font-family: 'Dosis';
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
-    .logreg-forms  .social-login{
-        width:200px;
-        margin:0 auto;
-        margin-bottom: 10px;
-    }
-    .logreg-forms  .social-btn{
-        font-size: 1.3rem;
-        font-weight: 100;
-        color:white;
-        width:200px;
-        height: 56px;
+button.form-btn.sx {
+    left: 0;
+    border-radius: 0 0 0 5px;
+    background-color: rgba(255, 125, 0, 0.35);
+    color: #fff;
+    transition:all 0.3s linear;
+}
 
-    }
-    .logreg-forms .social-btn:nth-child(1){
-        margin-bottom: 5px;
-    }
-    .logreg-forms .social-btn span{
-        display: none;
-    }
-    .logreg-forms  .facebook-btn:after{
-        content:'Facebook';
-    }
+button.form-btn.sx:hover {
+    background-color:rgba(255, 125, 0, 0.65);
+    color: #fff;
+}
 
-    .logreg-forms  .google-btn:after{
-        content:'Google+';
-    }
+button.form-btn.sx.back {
+    background-color: rgba(0, 0, 0, 0.15);
+    transition:all 0.3s linear;
+}
 
+button.form-btn.sx.back:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+button.form-btn.dx {
+    right: 0;
+    border-radius: 0 0 5px 0;
+    background-color: #ff7d00;
+    color: #fff;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ffc185;
+    width: 85%;
+    font-family: 'Roboto';
+    color: #ff7d00;
+    text-align: center;
+    font-size: 21px;
+    font-weight:100;
+    margin-bottom:25px;
+}
+
+::-webkit-input-placeholder {
+    color: #ffc185;
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+:-moz-placeholder {
+    color: #ffc185;
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+::-moz-placeholder {
+    color: #ffc185;
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+:-ms-input-placeholder {
+    color: #ffc185;
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+.signIn input,
+.signUp .w100 {
+    width: 100%;
+}
+
+.signIn{
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+}
+
+.signUp {
+    z-index: 2;
+}
+
+.active-dx{
+    animation-name: foregrounding-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.active-sx{
+    animation-name: foregrounding-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-dx{
+    animation-name: overshadowing-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-sx{
+    animation-name: overshadowing-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overshadowing-dx {
+    0%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+        z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes overshadowing-sx {
+    0%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+        z-index: 1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes foregrounding-dx {
+    0%{
+        z-index:1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50%{
+        z-index:2;
+        transform: perspective(100px) translate3d(400px, 0px, -30px);
+    }
+    100%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes foregrounding-sx {
+    0%{
+        z-index:1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50%{
+        z-index:2;
+        transform: perspective(100px) translate3d(-400px, 0px, -30px);
+    }
+    100%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
 }

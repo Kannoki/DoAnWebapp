@@ -9,24 +9,11 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>indexServlet</servlet-name>
-        <url-pattern>/index</url-pattern>
+        <url-pattern>/indexServlet</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>/index.jsp</welcome-file>
+        <welcome-file>indexServlet</welcome-file>
     </welcome-file-list>
-        <servlet>
-            <description></description>
-            <display-name>LoginController</display-name>
-            <servlet-name>LoginController</servlet-name>
 
-        </servlet>
-        <servlet-mapping>
-            <servlet-name>LoginController</servlet-name>
-            <url-pattern>/LoginController</url-pattern>
-        </servlet-mapping>
-
-    <session-config>
-        <session-timeout>60</session-timeout>
-    </session-config>
 
 </web-app>

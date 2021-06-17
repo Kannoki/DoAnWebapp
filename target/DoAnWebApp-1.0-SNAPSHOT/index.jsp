@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,8 +83,8 @@
 
         <div class="text-end">
             <a href="JSP/Login.jsp"> <button type="button" class="btn btn-outline-light me-2">Đăng
-                nhập</button></a>
-            <a href=""><button type="button" class="btn btn-warning">Đăng ký</button></a>
+                nhập/ Đăng kí</button></a>
+
         </div>
     </div>
 </header>
@@ -104,19 +105,20 @@
                 <hr>
             </div>
             <div class="row">
-            <c:forEach items="${listP}" var="p">
+                <c:forEach items="${listP}" var="p" >
                     <div class="col-lg-4 col-md-6 cl-mg">
                         <div class="card">
                             <img src="${p.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
                             <div class="card-body">
-                                <a class="a_card" href="">
+                                <a class="a_card" href="${p.link}">
                                     <h5 class="card-title">${p.name}</h5>
-                                    <p>${p.para}</p>
+                                    <p class="card-text">${p.para}</p>
                                 </a>
                             </div>
                         </div>
                     </div>
-            </c:forEach>
+
+                 </c:forEach>
             </div>
         </div>
     </div>
