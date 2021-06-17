@@ -33,8 +33,6 @@
     </form>
     <form class="signIn">
         <h3>Welcome</br>Back !</h3>
-        <button class="fb" type="button">Log In With Facebook</button>
-        <p>- or -</p>
         <input name="user" type="text" placeholder="Tên đăng nhập" autocomplete='off' reqired />
         <input name="password" type="password" placeholder="Mật khẩu" reqired />
         <button class="form-btn sx back" type="button">Back</button>

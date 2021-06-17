@@ -3,6 +3,7 @@ package DAO;
 import context.DBContext;
 import entity.Product;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +15,7 @@ public class ListAppDAO {
     PreparedStatement ps = null;
     ResultSet rs = null;
     public List<Product> getAllApp() {
-        List<Product> list = new ArrayList<>();
+        ArrayList<Product> list = new ArrayList<>();
         String query = "select * from sa_product where type='app'";
         try {
             conn = new DBContext().getConnection();
