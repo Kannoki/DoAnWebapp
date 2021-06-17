@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share App - Trang chủ</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/style.css" type="text/css">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="icon" href="item/Logo.svg">
 
@@ -78,7 +78,7 @@
         </form>
 
         <div class="text-end">
-            <a href="/JSP/Login.jsp"> <button type="button" class="btn btn-outline-light me-2">Đăng
+            <a href="JSP/Login.jsp"> <button type="button" class="btn btn-outline-light me-2">Đăng
                 nhập</button></a>
             <a href=""><button type="button" class="btn btn-warning">Đăng ký</button></a>
         </div>
@@ -100,23 +100,22 @@
                 <h2>Ứng dụng nổi bật</h2>
                 <hr>
             </div>
+            <div class="row">
             <c:forEach items="${listP}" var="o">
-                <div class="row">
+
                     <div class="col-lg-4 col-md-6 cl-mg">
                         <div class="card">
-                            <a href="">
-                                <img src="${o.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
-                            </a>
+                            <img src="${o.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
                             <div class="card-body">
                                 <a class="a_card" href="">
-                                <h5 class="card-title">${o.name}</h5>
+                                    <h5 class="card-title">${o.name}</h5>
                                     <p>${o.para}</p>
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>
             </c:forEach>
+            </div>
         </div>
     </div>
 

@@ -26,7 +26,7 @@
 <header class="p-3 bg_head text-white">
     <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start bg-head">
 
-        <a href="../index.jsp"><img src="Logo.svg" width="40px" height="40px" alt=""></a>
+        <a href="../index.jsp"><img src="../item/Logo.svg" width="40px" height="40px" alt=""></a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="../index.jsp  " class="nav-link px-2 text-black">Trang Chủ</a></li>
