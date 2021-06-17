@@ -1,11 +1,18 @@
 package entity;
 
+import context.DBContext;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 public class User {
     private int id;
     private String name_acc;
     private String name_log;
     private String passWord;
-    private String userRule;
+    private int userRule;
+
     public User(int id, String name_acc, String name_log, String passWord) {
         this.id = id;
         this.name_acc = name_acc;
@@ -13,11 +20,25 @@ public class User {
         this.passWord = passWord;
     }
 
-    public String getUserRule() {
+    public User(int id, String name_acc, String name_log, String passWord, int userRule, Object user) {
+        this.id = id;
+        this.name_acc = name_acc;
+        this.name_log = name_log;
+        this.passWord = passWord;
+        this.userRule = userRule;
+
+    }
+
+    public User(String name_acc, int userRule) {
+        this.name_acc = name_acc;
+        this.userRule = userRule;
+    }
+
+    public int getUserRule() {
         return userRule;
     }
 
-    public void setUserRule(String userRule) {
+    public void setUserRule(int userRule) {
         this.userRule = userRule;
     }
 

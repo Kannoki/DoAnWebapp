@@ -9,13 +9,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllDAO {
+public class ListGameDAO {
     Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
-    public List<Product> getAllApp() {
-        ArrayList<Product> list = new ArrayList<>();
-        String query = "select * from sa_product";
+    public List<Product> getAllGame() {
+        List<Product> list = new ArrayList<>();
+        String query = "select * from sa_product where type='game'";
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
@@ -32,8 +32,9 @@ public class AllDAO {
         return list;
     }
 
-    public Product getLast() {
+    public Product getGame() {
         String query = "select top 1 * from sa_product\n"
+                + "where type='game'"
                 + "order by id desc";
         try {
             conn = new DBContext().getConnection();//mo ket noi voi sql
@@ -50,6 +51,4 @@ public class AllDAO {
         }
         return null;
     }
-
-
 }
