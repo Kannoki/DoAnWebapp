@@ -29,6 +29,11 @@ public class User {
 
     }
 
+    public User(String name_log, String passWord) {
+        this.name_log = name_log;
+        this.passWord = passWord;
+    }
+
     public User(String name_acc, int userRule) {
         this.name_acc = name_acc;
         this.userRule = userRule;
@@ -72,5 +77,13 @@ public class User {
 
     public void setPassWord(String passWord) {
         this.passWord = passWord;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name_acc='" + name_acc + '\'' +
+                ", userRule=" + userRule +
+                '}';
     }
 }

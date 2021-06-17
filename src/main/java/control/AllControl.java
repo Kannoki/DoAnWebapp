@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "indexServlet", value = "/indexServlet")
@@ -17,9 +18,10 @@ public class AllControl extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         //b1: get data from dao
-        AllDAO a_dao = new AllDAO();
-        List<Product> list = a_dao.getAllApp();
 
+        AllDAO a_dao = new AllDAO();
+
+        ArrayList<Product> list = new ArrayList<Product>(a_dao.getAllApp());
         //b2: set data to jsp
         request.setAttribute("listP", list);
         request.getRequestDispatcher("index.jsp").forward(request, response);

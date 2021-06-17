@@ -1,14 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share App - Trang chủ</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/chatBox.css">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="icon" href="item/Logo.svg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
 </head>
 <body>
@@ -101,15 +104,15 @@
                 <hr>
             </div>
             <div class="row">
-            <c:forEach items="${listP}" var="o">
+            <c:forEach items="${listP}" var="p">
 
                     <div class="col-lg-4 col-md-6 cl-mg">
                         <div class="card">
-                            <img src="${o.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
+                            <img src="${p.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
                             <div class="card-body">
                                 <a class="a_card" href="">
-                                    <h5 class="card-title">${o.name}</h5>
-                                    <p>${o.para}</p>
+                                    <h5 class="card-title">${p.name}</h5>
+                                    <p>${p.para}</p>
                                 </a>
                             </div>
                         </div>
@@ -125,31 +128,28 @@
 
 
 
-
 <button class="openChatBtn" onclick="openForm()">Chat</button>
-<div class="openChat">
-    <form class="chatform" style="height:70% !important;">
+<div class="openChat" style="display: none">
+    <form class="chatform" style="min-height:70%">
         <h2>Chat</h2>
         <hr>
-        <div class="chatItem">
-            <a style="text-decoration: none; color: blue;">
-                Name
+        <div class="chatitem">
+            <a style="text-decoration: none; color: blue">
+                Admin.
             </a>
             <p>
-                Hi
+                Hi!
             </p>
+
         </div>
     </form>
     <form class="chatform">
-        <textarea class="tArea" placeholder="Type message.." name="msg"></textarea>
-        <div class="row">
-            <button type="submit" class="btn">Send</button>
-            <button type="button" class="btn close" onclick="closeForm()">Close</button>
-        </div>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn close" onclick="closeForm()">Close</button>
     </form>
 </div>
-
-<script language="JavaScript">
+<script>
     document.querySelector(".openChatBtn").addEventListener("click", openForm);
     document.querySelector(".close").addEventListener("click", closeForm);
 
@@ -161,6 +161,8 @@
         document.querySelector(".openChat").style.display = "none";
     }
 </script>
+
+
 
 <footer>
     <div class="container">
@@ -202,7 +204,7 @@
                     <div class="social social--color--filled ">
                         <ul class="none-list ">
                             <li>
-                                <a href="# ">
+                                <a href="https://www.facebook.com/profile.php?id=100024257892556">
                                     <span class="fab fa-facebook-f "></span>
                                 </a>
                             </li>

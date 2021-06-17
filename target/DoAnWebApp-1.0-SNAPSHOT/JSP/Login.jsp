@@ -1,214 +1,72 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ADMIN
-  Date: 6/17/2021
-  Time: 12:01 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Share App - Log In</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/lg.css">
-    <link rel="icon" href="../item/Logo.svg">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/lg.css" />
+    <title>Login Form</title>
 </head>
-
 <body>
+<div class="logreg-forms">
+    <form class="form-signin" action="login" method="post">
+        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
 
+        <input name="user"  type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+        <input name="pass"  type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+
+        <div class="form-group form-check">
+            <input name="remember" value="1" type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+
+        <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+        <hr>
+        <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+    </form>
+
+    <form action="signup" method="post" class="form-signup">
+        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
+        <input name="user" type="text" id="user-name" class="form-control" placeholder="User name" required="" autofocus="">
+        <input name="pass" type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+        <input name="repass" type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+
+        <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+        <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+    </form>
+    <br>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    function toggleResetPswd(e) {
+        e.preventDefault();
+        $('.logreg-forms .form-signin').toggle() // display:block or none
+        $('.logreg-forms .form-reset').toggle() // display:block or none
+    }
+
+    function toggleSignUp(e) {
+        e.preventDefault();
+        $('.logreg-forms .form-signin').toggle(); // display:block or none
+        $('.logreg-forms .form-signup').toggle(); // display:block or none
+    }
+
+    $(() => {
+        // Login Register Form
+        $('.logreg-forms #forgot_pswd').click(toggleResetPswd);
+        $('.logreg-forms #cancel_reset').click(toggleResetPswd);
+        $('.logreg-forms #btn-signup').click(toggleSignUp);
+        $('.logreg-forms #cancel_signup').click(toggleSignUp);
+    })
+</script>
 </body>
-<header class="p-3 bg_head text-white">
-    <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start bg-head">
-
-        <a href="../index.jsp"><img src="../item/Logo.svg" width="40px" height="40px" alt=""></a>
-
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="../index.jsp  " class="nav-link px-2 text-black">Trang Chủ</a></li>
-            <li>
-                <div class="dropdown">
-                    <a href="" class="nav-link px-2 text-black">Ứng Dụng</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li>
-                                <a href="">Lập Trình</a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">Thiết Kế - Đồ Họa</a>
-                            </li>
-                            <hr>
-
-                            <li>
-                                <a href="">Văn Phòng - Đa phương Tiện</a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">Tiện Ích -Đa Nhiệm.</a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown">
-                    <a href="#" class="nav-link px-2 text-black">Game</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li>
-                                <a href="">Bắn Súng</a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">Chiến Thuật</a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">Sinh Tồn</a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">Khác</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </li>
-            <li><a href="#" class="nav-link px-2 text-black">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 text-black">About</a></li>
-        </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-            <input type="search" class="form-control form-control-dark" placeholder="Search...">
-        </form>
-
-        <div class="text-end">
-            <a href="./signIn.html"><button type="button" class="btn btn-warning" >Đăng ký</button></a>
-        </div>
-    </div>
-
-</header>
-
-<section>
-    <div class="container" style="background-color: #f6f6f6">
-        <div class="row log-bg">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="box">
-                    <div class="login-head">
-                        <h2>
-                            Đăng Nhập
-                        </h2>
-                    </div>
-                    <div>
-                        <form action="">
-                            <label for="">Username:</label>
-                            <input type="text" class="text-field" placeholder="Nhập tên đã đăng kí.">
-                        </form>
-                        <form action="">
-                            <label for="">Password:</label>
-                            <input type="password" class="text-field" placeholder="Nhập mật khẩu.">
-                        </form>
-                        <form action="" class="log_l">
-                            <button class="btn" style="    background-color: #408cff; color:#ffffff">Đăng nhập </button>
-
-                            <a href="./signIn.html" class="a1">Chưa có tài khoản, Đăng ký ngay!</a>
-                            <a href="./forgotting.html" class="a2">Quên mật khẩu.</a>
-                        </form>
-
-                        <div style="color:white">
-                            ------------------------------------
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-<footer>
-    <div class=" container ">
-        <div class="row ">
-            <div class="col-md-6 ">
-                <div class="info-footer centered " style="max-width:80% ">
-                    <div class="info__logo lefted ">
-                        <h1 class="lefted ">
-                            SHARE APP
-                        </h1>
-                    </div>
-                    <p class="info--text lefted ">
-                        Trang web chia sẻ ứng dụng, trò chơi cho mọi người.
-                    </p>
-                </div>
-                <div class=" info-footer lefted ">
-                    <h4 class="footer-widget-title text--white le ">Liên hệ</h4>
-                    <ul class="info-contact none-list ">
-                        <li title="Phone Number ">
-                            <span class="info lefted ">0918607205</span>
-                        </li>
-                        <li title="Email ">
-                            <span class="info lefted ">tthieu.20it2@vku.udn.vn</span>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-6 ">
-                <div class="info-footer ">
-                    <div class="row ">
-
-                    </div>
-                </div>
-                <div class="newsletter ">
-                    <h4 class="footer-widget-title text--white ">Mạng xã hội</h4>
-                    <p>Theo dõi các mạng xã hội để có được những thông tin mới nhất</p>
-                    <div class="social social--color--filled ">
-                        <ul class="none-list ">
-                            <li>
-                                <a href="# ">
-                                    <span class="fab fa-facebook-f "></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="# ">
-                                    <span class="fab fa-twitter "></span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mini-footer ">
-        <p class="center ">
-            Copyrights by
-            <a class="deco-none " href="/ ">Kannoki</a>
-        </p>
-    </div>
-</footer>
-
-
-
-
-</body>
-
 </html>
