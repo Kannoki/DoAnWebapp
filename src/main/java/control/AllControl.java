@@ -23,9 +23,17 @@ public class AllControl extends HttpServlet {
         ArrayList<Product> list = new ArrayList<>(a_dao.getAllApp());
         //b2: set data to jsp
         request.setAttribute("listP", list);
-        request.getRequestDispatcher("index").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
         //404 -> url
         //500 -> jsp properties
+    }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        processRequest(request, response);
     }
 
 }

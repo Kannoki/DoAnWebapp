@@ -84,4 +84,18 @@ public class Product {
         this.link = link;
         this.para = para;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", types='" + types + '\'' +
+                ", info='" + info + '\'' +
+                ", image='" + image + '\'' +
+                ", category=" + category +
+                ", link='" + link + '\'' +
+                ", para='" + para + '\'' +
+                '}';
+    }
 }
