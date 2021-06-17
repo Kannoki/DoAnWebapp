@@ -37,27 +37,27 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.jms:javax.jms-api:2.0.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.websocket:javax.websocket-api:1.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.xml.ws:jaxws-api:2.3.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.xml.soap:javax.xml.soap-api:1.4.0" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.jws:javax.jws-api:1.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.7.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
-    <orderEntry type="library" exported="" name="Maven: javax.servlet:jstl:1.2" level="project" />
-    <orderEntry type="library" exported="" name="Maven: taglibs:standard:1.1.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jms:javax.jms-api:2.0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.xml.ws:jaxws-api:2.3.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.xml.soap:javax.xml.soap-api:1.4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jws:javax.jws-api:1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.7.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: taglibs:standard:1.1.2" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../standard-1.1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jstl-1.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -66,7 +66,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../jstl-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../standard.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

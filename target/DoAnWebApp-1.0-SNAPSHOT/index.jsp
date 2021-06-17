@@ -100,7 +100,7 @@
                 <h2>Ứng dụng nổi bật</h2>
                 <hr>
             </div>
-            <c:forEach item="${listP}" var="o">
+            <c:forEach items="${listP}" var="o">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 cl-mg">
                         <div class="card">
