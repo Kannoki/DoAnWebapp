@@ -8,6 +8,7 @@ public class Product {
     private String image;
     private int catalist;
     private String link;
+    private String para;
 
     public int getId() {
         return id;
@@ -65,6 +66,14 @@ public class Product {
         this.link = link;
     }
 
+    public String getPara() {
+        return para;
+    }
+
+    public void setPara(String para) {
+        this.para = para;
+    }
+
     public Product(int id, String name, String types, String info, String image, int catalist, String link) {
         this.id = id;
         this.name = name;
@@ -75,10 +84,11 @@ public class Product {
         this.link = link;
     }
 
-    public Product(int id, String name, String image) {
+    public Product(int id, String name, String image, String para) {
         this.id = id;
         this.name = name;
         this.image = image;
+        this.para = para;
     }
 
     public Product(int id, String name, String types, String image, int catalist) {

@@ -2,7 +2,8 @@
 package context;
 
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 
 
@@ -22,7 +23,9 @@ public class DBContext {
     private final String serverName = "LAPTOP-VQCJ9E5F";
     private final String dbName = "s_app";
     private final String portNumber = "1433";
-    private final String instance="";//LEAVE THIS ONE EMPTY IF YOUR SQL IS A SINGLE INSTANCE
+    private final String instance="";
     private final String userID = "sa";
     private final String password = "123";
+
+
 }

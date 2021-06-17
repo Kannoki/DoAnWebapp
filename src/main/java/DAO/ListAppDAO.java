@@ -1,13 +1,13 @@
 package DAO;
 
-import context.*;
+import context.DBContext;
+import entity.Product;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import entity.*;
 
 public class ListAppDAO {
     Connection conn = null;
@@ -23,7 +23,8 @@ public class ListAppDAO {
             while (rs.next()) {
                 list.add(new Product(rs.getInt(1),
                         rs.getString(2),
-                        rs.getString(5)
+                        rs.getString(5),
+                        rs.getString(8)
                 ));
             }
         } catch (Exception e) {
@@ -33,6 +34,7 @@ public class ListAppDAO {
 
     public Product getLast() {
         String query = "select top 1 * from sa_product\n"
+                + "where type='app'"
                 + "order by id desc";
         try {
             conn = new DBContext().getConnection();//mo ket noi voi sql
@@ -41,7 +43,8 @@ public class ListAppDAO {
             while(rs.next()){
                 return new Product(rs.getInt(1),
                         rs.getString(2),
-                        rs.getString(5)
+                        rs.getString(5),
+                        rs.getString(8)
                 );
             }
         } catch (Exception e) {

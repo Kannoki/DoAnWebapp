@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="icon" href="item/Logo.svg">
+
 </head>
 <body>
 <header class="p-3 bg_head text-white">
@@ -19,7 +21,7 @@
             <li><a href="#" class="nav-link px-2 text-secondary">Trang Chủ</a></li>
             <li>
                 <div class="dropdown">
-                    <a href="" class="nav-link px-2 text-black">Ứng Dụng</a>
+                    <a href="JSP/App.jsp" class="nav-link px-2 text-black">Ứng Dụng</a>
                     <div class="dropdown-content">
                         <ul>
                             <li>
@@ -91,7 +93,34 @@
         </p>
     </div>
 </div>
+<div class="container container-fluid">
+    <div class="row">
+        <div class="col f-box">
+            <div class="title">
+                <h2>Ứng dụng nổi bật</h2>
+                <hr>
+            </div>
+            <c:forEach item="${listP}" var="o">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 cl-mg">
+                        <div class="card">
+                            <a href="">
+                                <img src="${o.image}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="200">
+                            </a>
+                            <div class="card-body">
+                                <a class="a_card" href="">
+                                <h5 class="card-title">${o.name}</h5>
+                                    <p>${o.para}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
 
+</div>
 
 
 
@@ -100,11 +129,11 @@
 
 <button class="openChatBtn" onclick="openForm()">Chat</button>
 <div class="openChat">
-    <form class="chatform" style="min-height:70%">
+    <form class="chatform" style="height:70% !important;">
         <h2>Chat</h2>
         <hr>
-        <div class="chatitem">
-            <a style="text-decoration: none; color: blue">
+        <div class="chatItem">
+            <a style="text-decoration: none; color: blue;">
                 Name
             </a>
             <p>
@@ -113,15 +142,15 @@
         </div>
     </form>
     <form class="chatform">
-        <textarea placeholder="Type message.." name="msg" required></textarea>
-        <button type="submit" class="btn">Send</button>
-        <button type="button" class="btn close" onclick="closeForm()">Close</button>
+        <textarea class="tArea" placeholder="Type message.." name="msg"></textarea>
+        <div class="row">
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn close" onclick="closeForm()">Close</button>
+        </div>
     </form>
 </div>
 
-
-
-<script>
+<script language="JavaScript">
     document.querySelector(".openChatBtn").addEventListener("click", openForm);
     document.querySelector(".close").addEventListener("click", closeForm);
 
