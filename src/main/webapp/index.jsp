@@ -82,7 +82,7 @@
         </form>
 
         <div class="text-end">
-            <a href="JSP/Login.jsp"> <button type="button" class="btn btn-outline-light me-2">Đăng
+            <a href="logInControl"> <button type="button" class="btn btn-outline-light me-2">Đăng
                 nhập/ Đăng kí</button></a>
 
         </div>

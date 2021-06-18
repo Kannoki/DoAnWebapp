@@ -7,9 +7,17 @@
         <servlet-name>indexServlet</servlet-name>
         <servlet-class>control.AllControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>logInControl</servlet-name>
+        <servlet-class>control.LogInControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>indexServlet</servlet-name>
         <url-pattern>/indexServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logInControl</servlet-name>
+        <url-pattern>/logInControl</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>indexServlet</welcome-file>

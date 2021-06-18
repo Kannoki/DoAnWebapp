@@ -20,7 +20,7 @@ public class User {
         this.passWord = passWord;
     }
 
-    public User(int id, String name_acc, String name_log, String passWord, int userRule, Object user) {
+    public User(int id, String name_acc, String name_log, String passWord, int userRule) {
         this.id = id;
         this.name_acc = name_acc;
         this.name_log = name_log;

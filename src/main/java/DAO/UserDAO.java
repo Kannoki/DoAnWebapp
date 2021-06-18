@@ -15,7 +15,7 @@ public class UserDAO {
 
     //lay ra ten va quyen
     public User login(String name, String passWord){
-        String query="select * from user \n" + "where [log_name] = ?\n" + "and [log_password] = ?";
+        String query="select * from sa_user " + " where log_name = ? " + "and log_password = ?";
         try {
            conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
@@ -23,9 +23,11 @@ public class UserDAO {
             ps.setString(2, passWord);
             rs = ps.executeQuery();
             while (rs.next()){
-                return new User(
-                  rs.getString(2),
-                  rs.getInt(5)
+                return new User(rs.getInt(1),
+                    rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                    rs.getInt(5)
                 );
             }
         } catch (Exception e) {
@@ -33,7 +35,7 @@ public class UserDAO {
         }
         return null;
     }
-    public User signIn(String name,String logName,String password){
+    public User signIn(String name,String logName,String password,String repass){
         String query="insert into user values (?,?,?,1)";
         try{
             conn = new DBContext().getConnection();
@@ -48,7 +50,13 @@ public class UserDAO {
         }
         return null;
     }
-
+    //test
+    public static void main(String[] args) {
+        String name ="Kann";
+        String pass ="321";
+        User u = new UserDAO().login(name,pass);
+        System.out.println(u);
+    }
 
 
 }
