@@ -15,7 +15,7 @@ public class AllDAO {
     ResultSet rs = null;
     public ArrayList<Product> getAllApp() {
         ArrayList<Product> list = new ArrayList<>();
-        String query = "select * from sa_product";
+        String query = "select top(6) * from sa_product";
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);

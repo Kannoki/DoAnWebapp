@@ -20,7 +20,7 @@
 <body>
 
 <div class="container">
-  <form class="signIn ">
+  <form class="signIn" action="">
     <h3>Tạo tài khoản</h3>
     <p>Nhập tên tài khoản và mật khẩu.
     </p>
@@ -32,7 +32,8 @@
     <button class="form-btn dx" type="submit">Sign Up</button>
 
   </form>
-  <form class="signUp">
+  <!--đăng nhập-->
+  <form class="signUp" action="logInControl">
     <h3>Welcome</br>Back !</h3>
     <p  style="color: red" >
       ${mess}

@@ -55,7 +55,12 @@ public class UserDAO {
         String name ="Kann";
         String pass ="321";
         User u = new UserDAO().login(name,pass);
-        System.out.println(u);
+        if(u==null){
+
+        } else{
+            System.out.println(u);
+        }
+
     }
 
 
