@@ -19,30 +19,34 @@
 </head>
 <body>
 
-<div class="container">
-  <form class="signIn" action="">
-    <h3>Tạo tài khoản</h3>
-    <p>Nhập tên tài khoản và mật khẩu.
-    </p>
-    <input class="w100" type="text" placeholder="Tên tài khoản" reqired autocomplete='off' />
-    <input type="text" placeholder="Tên đăng nhập" autocomplete='off' reqired />
-    <input type="password" placeholder="Mật khẩu" reqired />
-    <input type="password" placeholder="Nhập lại mật khẩu" reqired />
-    <button class="form-btn sx log-in" type="button">Log In</button>
-    <button class="form-btn dx" type="submit">Sign Up</button>
+<div class="container-fluid">
+  <div class="row">
+    <div class="container">
+      <form class="signIn" action="">
+        <h3>Tạo tài khoản</h3>
+        <p>Nhập tên tài khoản và mật khẩu.
+        </p>
+        <input class="w100" type="text" placeholder="Tên tài khoản" reqired autocomplete='off' />
+        <input type="text" placeholder="Tên đăng nhập" autocomplete='off' reqired />
+        <input type="password" placeholder="Mật khẩu" reqired />
+        <input type="password" placeholder="Nhập lại mật khẩu" reqired />
+        <button class="form-btn sx log-in" type="button">Đăng nhập</button>
+        <button class="form-btn dx" type="submit">Đăng kí</button>
 
-  </form>
-  <!--đăng nhập-->
-  <form class="signUp" action="logInControl">
-    <h3>Welcome</br>Back !</h3>
-    <p  style="color: red" >
-      ${mess}
-    </p>
-    <input name="user" type="text" placeholder="Tên đăng nhập" autocomplete='off' reqired />
-    <input name="password" type="password" placeholder="Mật khẩu" reqired />
-    <button class="form-btn sx back" type="button">Back</button>
-    <button class="form-btn dx" type="submit">Log In</button>
-  </form>
+      </form>
+      <!--đăng nhập-->
+      <form class="signUp" action="logInControl" method="post">
+        <h3>Welcome</br>Back !</h3>
+          ${failLog}
+        <input name="user" type="text" placeholder="Tên đăng nhập" autocomplete='off' reqired />
+        <input name="password" type="password" placeholder="Mật khẩu" reqired />
+        <button class="form-btn sx back" type="button">Đăng ký</button>
+        <button class="form-btn dx" type="submit">Đăng Nhập</button>
+      </form>
+
+    </div>
+
+  </div>
 
 </div>
 <script>

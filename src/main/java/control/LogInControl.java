@@ -31,7 +31,9 @@ public class LogInControl extends HttpServlet {
         UserDAO dao = new UserDAO();
         User us = dao.login(username,password);
         if (us==null){
-            request.setAttribute("mess", "Nhập tài khoản hoặc mật khẩu.");
+            request.setAttribute("failLog", "<div class=\"alert alert-danger\" role=\"alert\">\n" +
+                    " Sai tài khoản hoặc mật khẩu\n" +
+                    "</div>");
             request.getRequestDispatcher("JSP/logIn.jsp").forward(request,response);
         }
         else {
