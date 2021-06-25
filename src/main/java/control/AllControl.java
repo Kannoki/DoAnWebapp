@@ -23,24 +23,9 @@ public class AllControl extends HttpServlet {
         AllDAO a_dao = new AllDAO();
 
         ArrayList<Product> list = new ArrayList<>(a_dao.getAllApp());
-        //b2: set data to jsp
-//            for (Product p : list){
-//                    String x = ("\n  <div class=\"col-lg-4 col-md-6 cl-mg\">\n" +
-//                            "                        <div class=\"card\">\n" +
-//                            "                            <img src=\""+p.getImage() +"\" alt=\"\" class=\"bd-placeholder-img card-img-top\" width=\"100%\" height=\"200\">\n" +
-//                            "                            <div class=\"card-body\">\n" +
-//                            "                                <a class=\"a_card\" href=\""+p.getLink() +">\n" +
-//                            "                                    <h5 class=\"card-title\">"+p.getName()+"</h5>\n" +
-//                            "                                    <p>"+p.getPara()+"</p>\n" +
-//                            "                                </a>\n" +
-//                            "                            </div>\n" +
-//                            "                        </div>\n" +
-//                            "                    </div>");
-//
-//            }
 
         request.setAttribute("listP", list);
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("JSP/index.jsp").forward(request, response);
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);

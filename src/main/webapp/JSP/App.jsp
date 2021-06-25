@@ -29,7 +29,7 @@
     <img src="../item/Logo.svg" width="40px" height="40px" alt="">
 
     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="../index.jsp" class="nav-link px-2 text-black">Trang Chủ</a></li>
+      <li><a href="index.jsp" class="nav-link px-2 text-black">Trang Chủ</a></li>
       <li>
         <div class="dropdown">
           <a href="#" class="nav-link px-2 text-secondary">Ứng Dụng</a>
